@@ -44,8 +44,6 @@ docker run --name as-test --net rrd-network -p 127.0.0.1:3000:3000 aerospike:ee-
 docker run --name rrd-test --net rrd-network -e STORAGE_HOST=as-test -p 127.0.0.1:8080:8080 rrd-service
 ```
 
-## Usage
-
 ## Project structure
 - `ci` - test script for ci integration.
 - `cmd` - running application.
@@ -60,7 +58,7 @@ docker run --name rrd-test --net rrd-network -e STORAGE_HOST=as-test -p 127.0.0.
     - `app.go` - services initialization, starting server.
 - `udf` - user defined function for aerospike.
 
-## API Doc
+## Usage
 Take a look at `swagger.yaml`
 
 ### Put metric
