@@ -91,7 +91,7 @@ because if we decide to change storage, we'll need to rewrite only this part.
 - Counters are stored in a database, so after restart we have the current value. 
 (This logic can be also implemented by counting all the records on start, but counting records never was a fast operation.)
 - I didn't use any validation library because validations here are basic.
-- I didn't undertake phrase in requirements `Support multiple metrics`. 
+- I didn't understand phrase in requirements `Support multiple metrics`. 
 If it means that we want to save metrics for different service (sources), 
 then we can easily achieve this by adding Source fields to our `models.Record`. 
 If it means different metric types, I've made `MetricValue` of type `any`, so we can save any value there.
