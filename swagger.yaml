@@ -1,0 +1,44 @@
+swagger: '2.0'
+info:
+  contact: {}
+  title: rrd-service
+  version: 1.0.0
+basePath: /
+paths:
+  /metrics:
+    get:
+      parameters:
+        - in: query
+          name: start
+          type: integer
+        - in: query
+          name: end
+          type: integer
+      responses:
+        '200':
+          description: ''
+      description: Get metrics by range from start to end.
+      operationId: getMetrics
+      summary: Get metrics
+    put:
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          schema:
+            properties:
+              metric_value:
+                example: 11.5
+                type: number
+              timestamp:
+                example: 1717745157997559
+                type: integer
+            type: object
+      responses:
+        '200':
+          description: ''
+      description: Put metric
+      operationId: putMetric
+      summary: Put metric
+tags: []
